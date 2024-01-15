@@ -1,0 +1,198 @@
+.service {
+    margin-top: 140px;
+    position: relative;
+    z-index: 1;
+    @include lg {
+        margin-top: 100px;
+    }
+    @include sm {
+        margin-top: 60px;
+    }
+    &::after {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: -300px;
+        width: 529px;
+        height: 529px;
+        content: '';
+        border-radius: 529.788px;
+        opacity: 0.4;
+        background: var(--Button, linear-gradient(99deg, #F38E1A 0.66%, #EB5311 99.7%));
+        filter: blur(298px);
+        @include xxl {
+            left: 0;
+            z-index: -1;
+        }
+        @include xl {
+            width: 300px;
+            height: 300px;
+        }
+    }
+    &::before {
+        position: absolute;
+        z-index: 2;
+        bottom: -200px;
+        right: -400px;
+        width: 529px;
+        height: 529px;
+        content: '';
+        border-radius: 529.788px;
+        opacity: 0.4;
+        background: var(--Button, linear-gradient(99deg, #F38E1A 0.66%, #EB5311 99.7%));
+        filter: blur(298px);
+        @include xxl {
+            right: 0;
+            z-index: -1;
+        }
+        @include xl {
+            width: 300px;
+            height: 300px;
+        }
+    }
+    & .sermar {
+        margin-bottom: 60px;
+        @include sm {
+            margin-bottom: 34px;
+            text-align: center;
+        }
+    }
+    &-title {
+        & h1 {
+            @include f53;
+        }
+    }
+    & p {
+        @include f24;
+    }
+    &-card {
+        & .card-1 {
+            padding: 58px 33px;
+            margin-bottom: 20px;
+            @include sm {
+                flex-wrap: wrap;
+            }
+            & .service-card-single {
+                &-text {
+                    margin-right: 300px;
+                    @include xl {
+                        margin-right: 215px;
+                    }
+                    @include sm {
+                        margin-right: 0;
+                        margin-bottom: 20px;
+                    }
+                }
+                &-img {
+                    width: 242px;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    & img {
+                        border-top-left-radius: 15px;
+                        border-bottom-right-radius: 15px;
+                    }
+                    @include sm {
+                        position: unset;
+                        width: 300px;
+                    }
+                }
+            }
+        }
+        & .card-2,
+        .card-3 {
+            padding: 24px 16px;
+            padding-top: 145px !important;
+        }
+        & .card-2 {
+            & .service-card-single {
+                &-img {
+                    width: 252px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    @include sm {
+                        width: 271px;
+                    }
+                    & img {
+                        border-top-left-radius: 15px;
+                        border-bottom-right-radius: 15px;
+                    }
+                }
+            }
+        }
+        & .card-3 {
+            & .service-card-single {
+                &-img {
+                    width: 252px;
+                    position: absolute;
+                    top: 0;
+                    right: 0 !important;
+                    & img {
+                        border-top-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                    }
+                }
+            }
+        }
+        & .card-6 {
+            padding: 58px 33px;
+            margin-top: 20px;
+            @include sm{
+                margin-top: 0;
+            }
+            @include sm {
+                flex-wrap: wrap;
+            }
+            & .service-card-single {
+                &-text {
+                    margin-right: 300px;
+                    @include xl {
+                        margin-right: 200px;
+                    }
+                    @include sm {
+                        margin-right: 0;
+                        margin-bottom: 20px;
+                    }
+                }
+                &-img {
+                    width: 142px;
+                    position: absolute;
+                    bottom: 58px;
+                    right: 33px;
+                    @include sm {
+                        position: unset;
+                    }
+                }
+            }
+        }
+        &-single {
+            background-color: $scard;
+            border-radius: 16px;
+            border: 1px solid #2B211D;
+            position: relative;
+            z-index: 1;
+            @include lg {
+                margin-bottom: 20px;
+            }
+            @include sm {
+                justify-content: center;
+                text-align: center
+            }
+            &-text {
+                & h2 {
+                    @include f28;
+                    margin-bottom: 12px;
+                }
+                & p {
+                    @include f16;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    -webkit-line-clamp: 6;
+                }
+            }
+        }
+    }
+}

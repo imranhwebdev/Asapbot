@@ -1,0 +1,296 @@
+.start {
+    &-title {
+        margin-bottom: 60px;
+        & h1 {
+            @include f64;
+            margin-bottom: 16px;
+        }
+        & p {
+            @include f20;
+        }
+    }
+    & .stbg {
+        padding: 52px 64px;
+        background-color: #1C1512;
+        border-radius: 40px;
+        margin-bottom: 30px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        @include sm {
+            padding: 30px 10px;
+        }
+        &::after {
+            position: absolute;
+            z-index: -1;
+            top: -11px;
+            right: -18px;
+            width: 229.666px;
+            height: 229.666px;
+            content: '';
+            border-radius: 100%;
+            background: #F38E1A;
+            opacity: 0.5;
+            filter: blur(130px);
+            background-repeat: no-repeat;
+            @include xxl {
+                right: 0;
+            }
+            @include xl {
+                opacity: 0.2;
+            }
+        }
+    }
+    &-content {
+        &-head {
+            & p {
+                color: $primary;
+                @include f16;
+                margin-bottom: 8px;
+                letter-spacing: 1.28px;
+                text-transform: uppercase;
+            }
+            & h1 {
+                font-size: 43px;
+                margin-bottom: 24px;
+                font-weight: 700;
+                @include lg {
+                    font-size: 35px;
+                }
+            }
+        }
+        &-list {
+            & h6 {
+                margin-bottom: 16px;
+                @include f22;
+                font-weight: 500;
+            }
+            & ul {
+                & li {
+                    display: flex;
+                    margin-bottom: 14px;
+                    align-items: center;
+                    & svg {
+                        margin-right: 8px;
+                    }
+                    & p {
+                        @include f16;
+                    }
+                }
+            }
+        }
+    }
+    &-right {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 16px 16px 0px 0px;
+        border: 1.5px solid #3E322D;
+        background: linear-gradient(180deg, #291F1B 0%, rgba(41, 31, 27, 0.00) 100%);
+        @include md {
+            height: 250px;
+            margin-top: 20px;
+        }
+    }
+}
+
+.setup {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 140px;
+    @include md {
+        margin-bottom: 50px;
+    }
+    &::before {
+        position: absolute;
+        z-index: -1;
+        bottom: -200px;
+        right: -100px !important;
+        width: 300px;
+        height: 300px;
+        content: '';
+        border-radius: 529.788px;
+        opacity: 0.5;
+        filter: blur(180px);
+        background: $primary;
+        @include xxl {
+            right: 0 !important;
+        }
+        @include xl {
+            width: 150px;
+            height: 150px;
+        }
+    }
+    & .atbg {
+        position: relative;
+        z-index: 1;
+        &::after {
+            position: absolute;
+            z-index: -1;
+            top: -100px;
+            left: -100px !important;
+            width: 229.666px;
+            height: 229.666px;
+            content: '';
+            border-radius: 529.788px;
+            opacity: 0.5;
+            filter: blur(130px);
+            background: $primary;
+            @include xxl {
+                left: 0;
+            }
+            @include xl {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+    &-content {
+        // display: none;
+        // opacity: 0;
+        // visibility: hidden;
+        & .sitem {
+            display: none;
+        }
+        & .stp {
+            margin-bottom: 16px;
+            @include f22;
+        }
+    }
+    &-btn {
+        padding: 32px;
+        border-radius: 24px 24px 0px 0px;
+        background: linear-gradient(180deg, #261C18 0%, rgba(12, 9, 8, 0.00) 100%);
+        @include sm {
+            padding: 8px;
+        }
+        &-wrap {
+            padding: 26px 17px;
+            border-radius: 16px 16px 0px 0px;
+            background: linear-gradient(180deg, #2D231F 0%, rgba(40, 31, 27, 0.00) 101.92%);
+            display: flex;
+            flex-wrap: wrap;
+            & button {
+                display: flex;
+                align-items: center;
+                padding: 10px 17px;
+                background-color: #322723;
+                border-radius: 4px;
+                @include f16;
+                font-weight: 500;
+                margin-right: 6px;
+                margin-bottom: 6px;
+                @include transition;
+                border: none;
+                color: $white;
+                & span {
+                    margin-right: 4px;
+                    @include transition;
+                    display: none;
+                }
+                &:hover {
+                    background-color: #6E58E1;
+                    & span {
+                        @include transition;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ready {
+    margin-bottom: -165px;
+    &-content {
+        padding-right: 170px;
+        @include xl {
+            padding-right: 40px;
+        }
+        @include lg {
+            font-size: 35px;
+        }
+        @include md {
+            padding-right: 0;
+        }
+        @include sm {
+            padding-bottom: 30px;
+        }
+        & h1 {
+            @include f64;
+            margin-bottom: 12px;
+        }
+        & p {
+            @include f20;
+            color: $heading;
+            font-weight: 500;
+            margin-bottom: 32px;
+        }
+        &-btn {
+            & button {
+                flex: 0 0 auto;
+            }
+            & .rbtn1 {
+                background-color: $heading;
+                color: #42526D;
+                margin-right: 16px;
+                background-image: unset;
+                @include transition;
+                & svg {
+                    color: #42526D;
+                    @include transition;
+                }
+                &:hover {
+                    background-color: $primary;
+                    color: $heading;
+                    & svg {
+                        color: $heading;
+                    }
+                }
+            }
+            & .rbtn2 {
+                color: $heading;
+                background-color: $primary;
+                background-image: unset;
+                & svg {
+                    color: $heading;
+                    @include transition;
+                }
+                &:hover {
+                    background: $heading;
+                    color: $black;
+                    & svg {
+                        color: $black;
+                    }
+                }
+            }
+        }
+    }
+    & .rbg {
+        border-radius: 24px;
+        background-image: linear-gradient($primary, $secondary);
+        position: relative;
+        z-index: 1;
+        padding: 52px 0 38px 72px;
+        @include md {
+            padding: 30px 0 30px 16px;
+        }
+        @include ssm {
+            padding: 20px 0;
+        }
+        &::after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            content: '';
+            background-image: url(../img/ready-bg.png);
+            border-radius: 24px;
+        }
+    }
+    &-img {
+        width: 243px;
+    }
+}

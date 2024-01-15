@@ -1,0 +1,125 @@
+.nav {
+    padding-top: 35px;
+    position: relative;
+    z-index: 1;
+    @include md {
+        padding-top: 15px;
+    }
+    &::after {
+        z-index: 2;
+        position: absolute;
+        top: -200px;
+        left: -243px;
+        content: '';
+        width: 576px;
+        height: 489px;
+        border-radius: 576.788px;
+        opacity: 0.3;
+        background: rgba(242, 135, 25, 0.70);
+        filter: blur(298px);
+        @include xxl {
+            left: 0;
+            z-index: -1;
+        }
+        @include xl {
+            width: 350px;
+            height: 300px;
+        }
+    }
+    & .greborder {
+        margin-top: 16px;
+    }
+    &-logo {
+        & .logo1 {
+            width: 157px;
+            height: auto;
+        }
+    }
+    &-link {
+        @include lg {
+            position: fixed;
+            z-index: 5;
+            top: 0;
+            left: -999px;
+            @include transition;
+            background-color: $body;
+            width: 200px;
+            height: 100vh;
+            & ul {
+                margin-top: 50px;
+                & li {
+                    margin-left: 20px;
+                    display: block;
+                    margin-bottom: 16px;
+                    & a {
+                        color: $heading;
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+        & ul {
+            & li {
+                & a {
+                    display: block;
+                    padding: 5px 8px;
+                    font-weight: 400;
+                    color: $text;
+                    @include f14;
+                    @include transition;
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+    &-btn {
+        align-items: center;
+        flex: 0 0 auto;
+        & a {
+            display: block;
+        }
+        & .menuTrigger {
+            display: none;
+            @media (max-width: 1279px) {
+                display: block;
+            }
+            margin-left: 20px;
+            @include ssm {
+                margin-left: 12px;
+            }
+            & svg {
+                color: $heading;
+                font-size: 30px;
+                @include transition;
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
+    & .svg-icon {
+        width: 1em;
+        height: 1em;
+        vertical-align: middle;
+        fill: currentColor;
+        overflow: hidden;
+    }
+}
+
+
+.nav.fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    padding:15px 23px;
+    padding-bottom: 0;
+    border-radius: 8px;
+    transition: all .3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    background: $scard;
+}

@@ -1,0 +1,138 @@
+.product {
+    margin: 140px 0;
+    position: relative;
+    z-index: 1;
+    @include lg {
+        margin: 90px 0;
+    }
+    @include md {
+        margin: 60px 0;
+    }
+    &::after {
+        position: absolute;
+        z-index: 2;
+        bottom: -300px;
+        left: -400px;
+        width: 529px;
+        height: 529px;
+        content: '';
+        border-radius: 529.788px;
+        opacity: 0.4;
+        background: var(--Button, linear-gradient(99deg, #F38E1A 0.66%, #EB5311 99.7%));
+        filter: blur(298px);
+        @include xxl {
+            left: 0;
+            z-index: -1;
+        }
+        @include xl {
+            width: 300px;
+            height: 300px;
+        }
+    }
+    &-title {
+        margin-bottom: 64px;
+        @include md {
+            margin-bottom: 35px;
+        }
+        & h1 {
+            @include f64;
+            margin: 0;
+        }
+    }
+    &-img {
+        width: 416px;
+        @include sm {
+            width: auto;
+        }
+    }
+    &-top {
+        margin-bottom: 20px;
+        & .product-card {
+            position: relative;
+            z-index: 1;
+            padding: 32px;
+            background-color: $scard;
+            border-radius: 16px;
+            border: 1px solid #2B211D;
+            @include lg {
+                width: 100%;
+            }
+            @include sm {
+                margin-bottom: 20px;
+            }
+            &-text {
+                padding-right: 100px;
+                @include md {
+                    padding-right: 0;
+                }
+                & h2 {
+                    margin-bottom: 24px;
+                }
+            }
+            &-img {
+                width: 285px;
+                position: absolute;
+                right: 32px;
+                bottom: 0;
+                @include md {
+                    width: 245px;
+                }
+                @include sm {
+                    width: auto;
+                    position: unset;
+                }
+            }
+        }
+        & .card-3 {
+            @include lg {
+                padding-bottom: 400px;
+                margin-top: 20px;
+            }
+            @include md {
+                padding-bottom: 344px !important;
+                padding: 14px;
+            }
+            & .product-card-img {
+                width: 335px;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                @include md {
+                    width: 300px;
+                }
+                & img {
+                    border-bottom-right-radius: 15px;
+                }
+            }
+        }
+    }
+    &-bottom {
+        & .product-card {
+            position: relative;
+            z-index: 1;
+            padding: 32px;
+            background-color: $scard;
+            border-radius: 16px;
+            border: 1px solid #2B211D;
+            @include lg {
+                margin-top: 20px;
+            }
+            &-text {
+                padding-right: 88px;
+                padding-bottom: 157px;
+                @include md {
+                    padding-bottom: 125px;
+                }
+                & p {
+                    color: $primary;
+                    margin-top: 12px;
+                }
+            }
+            &-img {
+                position: absolute;
+                bottom: 0px;
+                right: 32px;
+            }
+        }
+    }
+}
