@@ -26,26 +26,6 @@
         &:last-child {
           width: 280px;
         }
-        &:after {
-          content: "Phase 1";
-          position: absolute;
-          top: 50%;
-          left: calc(100% + 1px);
-          bottom: 0;
-          width: 107px;
-          height: 40px;
-          transform: translateY(-50%);
-          border-radius: 32px;
-          background: var(--forground, #1C1512);
-          padding: 8px 24px;
-          z-index: 2;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 150%;
-          color: #FAFBFB;
-          margin-left: -40px;
-        }
       & .time_line_list li::before {
         content: "";
         position: absolute;
@@ -61,7 +41,25 @@
         background-size: contain;
       }
     }
-    
+    & .phase{
+        position: absolute;
+        top: 50%;
+        left: calc(100% + 1px);
+        bottom: 0;
+        width: 107px;
+        height: 40px;
+        transform: translateY(-50%);
+        border-radius: 32px;
+        background: var(--forground, #1C1512);
+        padding: 8px 24px;
+        z-index: 2;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        color: #FAFBFB;
+        margin-left: -40px;
+    }
   }
 }
 
@@ -79,6 +77,12 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
+  }
+}
+
+.swiper-slide.swiper-slide-active.timeSingleBox{
+  & .phase{
+    background: var(--forground, #F38E1A);
   }
 }
 
@@ -121,48 +125,6 @@
   z-index: -1;
 }
 
-.timeline .timeLineSlider .timeSingleBox:nth-child(2)::after{
-  content: "Phase 2";
-}
-.timeline .timeLineSlider .timeSingleBox:nth-child(3)::after{
-  content: "Phase 3";
-}
-.timeline .timeLineSlider .timeSingleBox:nth-child(4)::after{
-  content: "Phase 4";
-}
-.timeline .timeLineSlider .timeSingleBox:nth-child(5)::after{
-  content: "Phase 5";
-}
-.timeline .timeLineSlider .timeSingleBox:nth-child(6)::after{
-  content: "Phase 6";
-}
-.timeline .timeLineSlider .timeSingleBox:nth-child(7)::after{
-  content: "Phase 7";
-}
-.timeline .timeLineSlider .timeSingleBox:nth-child(8)::after{
-  content: "Phase 8";
-}
-.timeline .timeLineSlider .timeSingleBox:nth-child(9)::after{
-  content: "Phase 9";
-}
-.timeline .timeLineSlider .timeSingleBox:nth-child(10)::after{
-  content: "Phase 10";
-}
-.timeline .timeLineSlider .timeSingleBox:nth-child(11)::after{
-  content: "Phase 11";
-}
-.timeline .timeLineSlider .timeSingleBox:nth-child(12)::after{
-  content: "Phase 12";
-}
-.timeline .timeLineSlider .timeSingleBox:nth-child(13)::after{
-  content: "Phase 13";
-}
-.timeline .timeLineSlider .timeSingleBox:nth-child(14)::after{
-  content: "Phase 14";
-}
-.timeline .timeLineSlider .timeSingleBox:nth-child(15)::after{
-  content: "Phase 15";
-}
 .timeSingleBox  .time_line_list li{
   position: relative;
   z-index: 1;

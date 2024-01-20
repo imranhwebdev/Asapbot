@@ -115,6 +115,7 @@ function RoadMap() {
             >
           {slideData.map((items, index) => (
             <SwiperSlide key={index} className="timeSingleBox">
+              <span className='phase'>Phase {index + 1}</span>
               <ul className="time_line_list">
                 {items.map((item, i) => (
                   <li key={i}>{item}</li>
@@ -125,7 +126,6 @@ function RoadMap() {
             </Swiper>
           </Col>
         </Row>
-        
       </Container>
     </section>
   );
