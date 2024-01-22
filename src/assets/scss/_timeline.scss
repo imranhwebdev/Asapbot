@@ -26,20 +26,24 @@
         &:last-child {
           width: 280px;
         }
-      & .time_line_list li::before {
-        content: "";
-        position: absolute;
-        top: 1px;
-        left: 0;
-        bottom: 0;
-        width: 16px;
-        height: 16px;
-        z-index: -1;
-        background-image:url('../img/tdisableDot.png');
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-      }
+        & .time_line_list li::before {
+          content: "";
+          position: absolute;
+          top: 1px;
+          left: 0;
+          bottom: 0;
+          width: 16px;
+          height: 16px;
+          z-index: -1;
+          background-image:url('../img/tdisableDot.png');
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: contain;
+        }
+        & .time_line_list li.active::before {
+          background-image:url('../img/tldot.png');
+        }
+     
     }
     & .phase{
         position: absolute;
@@ -63,22 +67,6 @@
   }
 }
 
-.swiper-slide.swiper-slide-active.timeSingleBox{
-  & .time_line_list li::before {
-    content: "";
-    position: absolute;
-    top: 1px;
-    left: 0;
-    bottom: 0;
-    width: 16px;
-    height: 16px;
-    z-index: -1;
-    background-image:url('../img/tldot.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-  }
-}
 
 .swiper-slide.swiper-slide-active.timeSingleBox{
   & .phase{

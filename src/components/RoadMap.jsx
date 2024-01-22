@@ -7,26 +7,7 @@ function RoadMap() {
   const SectionTitle = "Technical Roadmap";
   const slideData = [
     [
-      'Project Legacy Development', 
-      'Team Assembling Project Launch', 
-      'Beta Testing', 
-      'Token Alerts', 
-      'Buy / Sell Swaps', 
-      'Token Metrics Listing (CMC, CG)', 
-      'Dashboard release', 
-      'Frontend Upgrade release', 
-      'V1 Beta Launching'
-    ],
-    [
-      'Swap Fee Integrations', 
-      'Limit Orders (Buy / Sell)', 
-      'User-Generated Wallet Manager', 
-      'Token Scanner Alert Upgrades',
-      'PNL and Trade History',
-      'Burn Liquidity Alert',
-      'User Bugs Reporting Log',
-      'Partnership',
-      'Marketing',
+      
     ],
     [
       'UX Updates',
@@ -66,6 +47,7 @@ function RoadMap() {
     ],
     
   ]; 
+  
   return (
     <section class="timeline" id='roadmap'>
       <Container>
@@ -90,6 +72,7 @@ function RoadMap() {
               }}
               speed={800} 
               modules={[Autoplay, Navigation]}
+              initialSlide={3}
               breakpoints={{
                 0: {
                   slidesPerView: 2,
@@ -113,16 +96,88 @@ function RoadMap() {
               }}
               className="timeLineSlider"
             >
-          {slideData.map((items, index) => (
-            <SwiperSlide key={index} className="timeSingleBox">
-              <span className='phase'>Phase {index + 1}</span>
+            <SwiperSlide className="timeSingleBox">
+              <span className='phase'>Phase 1</span>
               <ul className="time_line_list">
-                {items.map((item, i) => (
-                  <li key={i}>{item}</li>
-                ))}
+                <li className='active'>Project Legacy Development</li>
+                <li className='active'>Team Assembling Project Launch</li>
+                <li className='active'>Beta Testing</li>
+                <li className='active'>Token Alerts</li>
+                <li className='active'>Buy / Sell Swaps</li>
+                <li className='active'>Token Metrics Listing (CMC, CG)</li>
+                <li className='active'>Dashboard release</li>
+                <li className='active'>Frontend Upgrade release</li>
+                <li className='active'>V1 Beta Launching</li>
               </ul>
             </SwiperSlide>
-          ))}
+            <SwiperSlide className="timeSingleBox">
+              <span className='phase'>Phase 2</span>
+              <ul className="time_line_list">
+                <li className='active'>Swap Fee Integrations</li>
+                <li className='active'>Limit Orders (Buy / Sell)</li>
+                <li className='active'>User-Generated Wallet Manager</li>
+                <li className='active'>Token Scanner Alert Upgrades</li>
+                <li className='active'>PNL and Trade History</li>
+                <li className='active'>Burn Liquidity Alert</li>
+                <li className='active'>User Bugs Reporting Log</li>
+                <li className='active'>Partnership</li>
+                <li className='active'>Marketing</li>
+              </ul>
+            </SwiperSlide>
+            <SwiperSlide className="timeSingleBox">
+              <span className='phase'>Phase 3</span>
+              <ul className="time_line_list">
+                <li className='active'>UX Updates</li>
+                <li className='active'>MEV Protection</li>
+                <li className='active'>Auto Sniper released</li>
+                <li className='active'>New Landing page Upgrade</li>
+                <li className='active'>Auto Buy/Auto Selling launched</li>
+              </ul>
+            </SwiperSlide>
+            <SwiperSlide className="timeSingleBox">
+              <span className='phase'>Phase 4</span>
+              <ul className="time_line_list">
+                <li>Multi-Server launching</li>
+                <li>Multi-Chain Intregration</li>
+                <li>Advance Sniper Upgrades</li>
+                <li>Marketing</li>
+              </ul>
+            </SwiperSlide>
+            <SwiperSlide className="timeSingleBox">
+              <span className='phase'>Phase 5</span>
+              <ul className="time_line_list">
+                <li> Asap Rebranding </li>
+                <li>-New Tokenomics</li>
+                <li>-Introducing Asap Staking</li>
+                <li>Asap Api beta development</li>
+              </ul>
+            </SwiperSlide>
+            <SwiperSlide className="timeSingleBox">
+              <span className='phase'>Phase 6</span>
+              <ul className="time_line_list">
+                <li>ASAP AI Engine  Beta</li>
+                <li>-Trade, snipe better by leveraging our AI Algo</li>
+                <li>ASAPAD - Stake and invest in new launch</li>
+              </ul>
+            </SwiperSlide>
+            <SwiperSlide className="timeSingleBox">
+              <span className='phase'>Phase 7</span>
+              <ul className="time_line_list">
+                <li>Mobile Bot Apps (iOS & Android)</li>
+                <li>Web Dapp Bot & Sniper</li>
+                <li>Multi-Platforms</li>
+                <li> - Discord, Mobile, Web bot platforms</li>
+                <li> - Trade & snipe on-chain Asap anywhere you go</li>
+              </ul>
+            </SwiperSlide>
+            <SwiperSlide className="timeSingleBox">
+              <span className='phase'>Phase 8</span>
+              <ul className="time_line_list">
+                <li>ASAP API Premium services</li>
+                <li>Asap Bet</li>
+                <li>On-chain casino coming to ASAPBET</li>
+              </ul>
+            </SwiperSlide>
             </Swiper>
           </Col>
         </Row>
